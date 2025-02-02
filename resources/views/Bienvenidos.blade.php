@@ -22,6 +22,6 @@
         @endfor
     </div>
     
-    <div class="firma">Hecho por Salvador Sarmiento</div>
+    <div class="firma">Hecho por :Salvador Sarmiento</div>
 </body>
 </html>
