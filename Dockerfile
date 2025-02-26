@@ -22,8 +22,6 @@ COPY . .
 # Instalar Composer y dependencias de Laravel
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 RUN composer install --no-dev --optimize-autoloader
-RUN php artisan key:generate
-
 # Exponer el puerto para que Laravel funcione
 EXPOSE 8000
 
