@@ -10,7 +10,7 @@
     <div class="container">
     <h1>¡Bienvenidos a Delta!</h1>
         <p>Explora y disfruta de una experiencia moderna y eficiente.</p>
-        <a href="#" class="btn">Descubrir Más</a>
+        <a href="Informacion.blade.php" class="btn">Descubrir Más</a>
     </div>
     <div class="fondo">
         @for ($x = 0; $x < 15; $x++) 
