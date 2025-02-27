@@ -9,8 +9,10 @@
 <body>
     <div class="container">
     <h1>¡Bienvenidos a Delta!</h1>
-        <p>Explora y disfruta de una experiencia moderna y eficiente.</p>
-        <a href="{{ url('/informacion') }}" class="btn">Descubrir Más</a>
+        <p>Delta es lo que se define como accidente geografico por su formación, 
+            pero si se toma de otra manera, puede llegar a ser incluso el 
+            origen y sustento de muchas formas de vida o ideas.</p>
+        <a href="{{ url('/informacion') }}" class="btn">Presiona si quieres saber sobre Delta</a>
     </div>
     <div class="fondo">
         @for ($x = 0; $x < 15; $x++) 
@@ -22,6 +24,6 @@
         @endfor
     </div>
     
-    <div class="firma">Hecho por :Salvador Sarmiento</div>
+    <div class="firma">Hecho por:Eduardo Salvador Araujo Sarmiento</div>
 </body>
 </html>

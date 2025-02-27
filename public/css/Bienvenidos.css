@@ -21,6 +21,7 @@ body {
 
 h1 {
     color: #ffffff; /* Blanco */
+    font-size: 50px;
     margin-bottom: 15px;
 }
 
@@ -33,7 +34,7 @@ p {
 .btn {
     display: inline-block;
     background-color: #63d1ad; /* Verde menta */
-    color: #ffffff;
+    color: #0c0b0b;
     padding: 12px 24px;
     border-radius: 8px;
     text-decoration: none;
@@ -66,23 +67,23 @@ p {
     opacity: 0.9;
 }
 
-/* Colores para los rectángulos */
+/* Colores para los rectángulos de fondo */
 .blanco { background-color: #f1c40f; /* Amarillo mostaza */ }
 .rosado { background-color: #ff7f50; /* Naranja cálido */ }
-.beige  { background-color: #63d1ad; /* Verde menta */ }
+.beige  { background-color: #63d1ad; /* Verde mentita */ }
 
 /* Animación continua hacia abajo */
 @keyframes desplazamiento {
     from { transform: translateY(0); }
-    to   { transform: translateY(-100vh); } /* Se mueve exactamente 1 pantalla hacia arriba */
+    to   { transform: translateY(-100vh); }
 }
 
 .firma {
     position: fixed;
     bottom: 10px;
     right: 20px;
-    font-size: 20px;
+    font-size: 30px;
     font-style: italic;
-    color: #dcdcdc; /* Gris claro */
+    color: #000000; /* Gris claro */
     z-index: 1;
 }
