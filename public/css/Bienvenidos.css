@@ -87,3 +87,11 @@ p {
     color: #000000;
     z-index: 1;
 }
+
+#reveal-button {
+    opacity: 0.00; /* Casi invisible, pero presente */
+    visibility: visible;
+    transform: translateY(0); /* Sin movimiento brusco */
+    transition: opacity 3s ease-in-out; /* Transición lenta */
+}
+

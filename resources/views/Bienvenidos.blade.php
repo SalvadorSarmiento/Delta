@@ -10,7 +10,7 @@
     <div class="container">
     <h1>¡Bienvenidos a Delta!</h1>
     <p id="typing-text"></p>
-        <a href="{{ url('/informacion') }}" class="btn">Presiona si quieres saber sobre Delta</a>
+        <a href="{{ url('/informacion') }}" class="btn" id="reveal-button">Presiona si quieres saber sobre Delta</a>
     </div>
     <div class="fondo">
         @for ($x = 0; $x < 15; $x++) 
