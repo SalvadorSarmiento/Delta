@@ -9,9 +9,7 @@
 <body>
     <div class="container">
     <h1>¡Bienvenidos a Delta!</h1>
-        <p>Delta es lo que se define como accidente geografico por su formación, 
-            pero si se toma de otra manera, puede llegar a ser incluso el 
-            origen y sustento de muchas formas de vida o ideas.</p>
+    <p id="typing-text"></p>
         <a href="{{ url('/informacion') }}" class="btn">Presiona si quieres saber sobre Delta</a>
     </div>
     <div class="fondo">
@@ -25,5 +23,8 @@
     </div>
     
     <div class="firma">Hecho por:Eduardo Salvador Araujo Sarmiento</div>
+
+    <!-- Enlace del archivo JavaScript externo para la animacion -->
+    <script src="{{ asset('js/bienvenidos.js') }}"></script>
 </body>
 </html>
