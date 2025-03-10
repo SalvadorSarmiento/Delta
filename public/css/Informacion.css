@@ -1,0 +1,138 @@
+/* Reset básico */
+body, h2, p {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #0A192F; /* Azul marino oscuro */
+    color: white;
+}
+
+/* Contenedor principal */
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+/* Paneles */
+.panel {
+    padding: 20px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Panel Izquierdo (Información Personal) */
+.left-panel {
+    width: 20%;
+    background: linear-gradient(13deg, #3B82F6, #000000); /* Azul marino con degradado */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.left-panel h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #4F6D9E;
+    padding-bottom: 5px;
+    text-align: center;
+}
+
+.left-panel p {
+    font-size: 14px;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* Panel Central (Tecnologías) */
+.center-panel {
+    width: 60%;
+    background: linear-gradient(180deg, #3B82F6, #1E3A8A);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.center-panel h2 {
+    font-size: 26px;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #4F6D9E;
+    padding-bottom: 5px;
+}
+
+/* Contenedor de tecnologías */
+.tech-container {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.tech-item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 8px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.tech-item:hover {
+    transform: scale(1.05);
+}
+
+/* Botones */
+.tech-btn {
+    background: #2563EB;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+    text-decoration: none;
+}
+
+.tech-btn:hover {
+    background: #1E40AF;
+}
+
+/* Descripción de tecnología */
+.tech-desc {
+    flex-grow: 1;
+    margin-left: 15px;
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+/* Panel Derecho (Contenido Adicional) */
+.right-panel {
+    width: 20%;
+    background: linear-gradient(180deg, #1E3A8A, #0A192F);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.right-panel h2 {
+    font-size: 24px;
+    border-bottom: 2px solid #4F6D9E;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+.right-panel p {
+    font-size: 14px;
+    text-align: center;
+}

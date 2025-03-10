@@ -22,7 +22,7 @@
         @endfor
     </div>
     
-    <div class="firma">Hecho por:Eduardo Salvador Araujo Sarmiento</div>
+    <div class="firma">Hecho por: Eduardo Salvador Araujo Sarmiento</div>
 
     <!-- Enlace del archivo JavaScript externo para la animacion -->
     <script src="{{ asset('js/bienvenidos.js') }}"></script>
