@@ -1,11 +1,8 @@
 /* Reset básico */
-body, h2, p {
+body {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
-}
-
-body {
     background-color: #0A192F; /* Azul marino oscuro */
     color: white;
 }
@@ -22,57 +19,78 @@ body {
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
 }
 
-/* ===== Panel Izquierdo (Imagen + Información Personal) ===== */
+/* ===== Panel Izquierdo (Información Personal) ===== */
 .left-panel {
-    width: 25%;
-    background: #0A192F;
-    color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
-    padding: 20px;
-    text-align: center;
-    border-right: 3px solid #4F6D9E;
+    justify-content: center;
+    width: 30%;
+    background: linear-gradient(180deg, #1E3A8A, #0A192F);
+    padding: 30px;
+    position: relative;
 }
 
-/* Imagen de perfil en el panel izquierdo */
+/* Ilustraciones sutiles */
+.left-panel::before {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: url('/imagenes/patron.svg') no-repeat center;
+    background-size: contain;
+    opacity: 0.2;
+    top: 10px;
+    left: 10px;
+}
+
+/* Foto de perfil */
 .perfil-img {
-    width: 150px;  /* Ajusta el tamaño de la imagen */
-    height: 150px;
-    border-radius: 50%;  /* Mantiene la imagen circular */
-    border: 3px solid #ffffff;  /* Borde para resaltar la foto */
-    margin-bottom: 20px;  /* Espacio entre la foto y el texto */
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin-bottom: 20px;
 }
 
 /* Información personal */
 .left-panel h2 {
     font-size: 22px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    border-bottom: 2px dashed #4F6D9E;
+    padding-bottom: 5px;
 }
 
-.left-panel ul {
-    list-style: none;
-    padding: 0;
-}
-
-.left-panel ul li {
-    font-size: 14px;
+.nombre, .email, .ubicacion {
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
     margin: 5px 0;
 }
 
+.email::before {
+    content: "📧";
+}
 
-/* Panel Central (Tecnologías) */
+.ubicacion::before {
+    content: "📍";
+    color: #ff69b4;
+}
+
+/* ===== Panel Central (Tecnologías) ===== */
 .center-panel {
-    width: 60%;
-    background: linear-gradient(180deg, #3B82F6, #1E3A8A);
-    color: white;
+    width: 70%;
+    background: linear-gradient(180deg, #00122f, #1E3A8A);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 40px;
 }
 
+/* Título */
 .center-panel h2 {
     font-size: 26px;
     margin-bottom: 20px;
@@ -88,6 +106,7 @@ body {
     gap: 15px;
 }
 
+/* Cada tecnología */
 .tech-item {
     display: flex;
     align-items: center;
@@ -97,13 +116,42 @@ body {
     padding: 15px;
     border-radius: 8px;
     transition: transform 0.2s ease-in-out;
+    position: relative;
 }
+
+/* Íconos de tecnologías personalizados */
+.tech-item[data-tech="JavaScript"] .tech-btn::before {
+    content: "🟨 ";
+}
+
+.tech-item[data-tech="Python"] .tech-btn::before {
+    content: "🐍 ";
+}
+
+.tech-item[data-tech="SQL"] .tech-btn::before {
+    content: "🗄️ ";
+}
+
+.tech-item[data-tech="Java"] .tech-btn::before {
+    content: "☕ ";
+}
+
+.tech-item[data-tech="PHP"] .tech-btn::before {
+    content: "🐘 ";
+}
+
+.tech-item::before {
+    position: absolute;
+    left: 10px;
+    font-size: 20px;
+}
+
 
 .tech-item:hover {
     transform: scale(1.05);
 }
 
-/* Botones */
+/* Botones de tecnología */
 .tech-btn {
     background: #2563EB;
     color: white;
@@ -124,124 +172,12 @@ body {
 /* Descripción de tecnología */
 .tech-desc {
     flex-grow: 1;
-    margin-left: 15px;
+    margin-left: 30px;
     font-size: 14px;
     opacity: 0.9;
 }
 
-/* ===== Panel Derecho (Perfil Profesional) ===== */
-.right-panel {
-    width: 75%;
-    background: linear-gradient(180deg, #1E3A8A, #0A192F);
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    padding: 30px;
-    text-align: justify;
-    border-left: 3px solid #4F6D9E;
-}
-
-/* Estilo del título */
-.right-panel h2 {
-    font-size: 24px;
-    border-bottom: 3px solid #4F6D9E;
-    padding-bottom: 5px;
-    margin-bottom: 15px;
-    text-align: left;
-}
-
-/* Párrafos justificados */
-.perfil-desc {
-    font-size: 16px;
-    line-height: 1.6;
-    text-align: justify;
-    background: rgba(255, 255, 255, 0.1);
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
-    margin-bottom: 10px;
-}
-
-/* Contenedor del perfil */
-.perfil-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-    background: rgba(255, 255, 255, 0.1);
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
-}
-
-/* Imagen del perfil */
-.perfil-img {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    border: 3px solid #4F6D9E;
-    box-shadow: 0px 0px 10px rgba(79, 109, 158, 0.6);
-}
-
-.right-panel p {
-    font-size: 14px;
-    text-align: center;
-}
-
-/* Fondo animado */
-.fondo {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 200vh; 
-    display: flex;
-    flex-wrap: wrap;
-    z-index: -1;
-    animation: desplazamiento 10s ease-in-out infinite alternate;
-}
-
-/* Estilo de los rectángulos */
-.rectangulo {
-    width: 6.66vw;
-    height: 150px;
-    box-sizing: border-box;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    opacity: 0.85;
-}
-
-/* Colores de los rectángulos */
-.azul-claro { background-color: #5DADE2; } /* Celeste vibrante */
-.azul-medio { background-color: #3498DB; } /* Azul intermedio */
-.azul-oscuro { background-color: #2E86C1; } /* Azul profundo */
-
-/* Animación de vaivén mejorada */
-@keyframes desplazamiento {
-    0% {
-        transform: translateY(0);
-    }
-    100% {
-        transform: translateY(-100vh);
-    }
-}
-
-/* Firma */
-.firma {
-    position: fixed;
-    bottom: 10px;
-    right: 20px;
-    font-size: 25px;
-    font-style: italic;
-    color: #D6EAF8; /* Azul claro */
-    z-index: 1;
-}
-
-/* Botón oculto */
-#reveal-button {
-    opacity: 0.00;
-    visibility: visible;
-    transform: translateY(0);
-    transition: opacity 3s ease-in-out;
+/* Separadores */
+.tech-item:not(:last-child) {
+    border-bottom: 2px dotted rgba(255, 255, 255, 0.3);
 }

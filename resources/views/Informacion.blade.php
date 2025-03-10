@@ -5,62 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Información</title>
     <link rel="stylesheet" href="css/informacion.css"> <!-- Enlace al archivo CSS -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> <!-- Librería de iconos -->
 </head>
 <body>
     <div class="container">
         <!-- Panel Izquierdo (Información Personal) -->
         <div class="panel left-panel">
-            <img src="img/perfil.png" alt="Foto de perfil" class="perfil-img">
+            <img src="/imagenes/ss_png.png" alt="Foto de perfil" class="perfil-img">
             <h2>Información Personal</h2>
-            <p><strong>Eduardo Salvador Araujo Sarmiento</strong></p>
-            <p>📧 eduardoaraujo6660@gmail.com</p>
-            <p>📍 Bellavista, Callao</p>
+            <p class="nombre"><i class="fas fa-user"></i> <strong>Eduardo Salvador Araujo Sarmiento</strong></p>
+            <p class="email"><i class="fas fa-envelope"></i> eduardoaraujo6660@gmail.com</p>
+            <p class="ubicacion"><i class="fas fa-map-marker-alt"></i> Bellavista, Callao.</p>
         </div>
 
         <!-- Panel Central (Tecnologías y Resumen) -->
         <div class="panel center-panel">
             <h2>Mis Tecnologías</h2>
             <div class="tech-container">
-                <div class="tech-item">
-                    <a href="#" class="tech-btn">JavaScript</a>
+                <div class="tech-item" data-tech="JavaScript">
+                    <a href="#" class="tech-btn">
+                        <i class="fab fa-js-square"></i> <span>JavaScript</span>
+                    </a>
                     <p class="tech-desc">Uso JavaScript para desarrollo web dinámico y aplicaciones interactivas.</p>
                 </div>
-                <div class="tech-item">
-                    <a href="#" class="tech-btn">Python</a>
+                
+                <div class="tech-item" data-tech="Python">
+                    <a href="#" class="tech-btn">
+                        <i class="fab fa-python"></i> <span>Python</span>
+                    </a>
                     <p class="tech-desc">Utilizo Python para automatización, análisis de datos e inteligencia artificial.</p>
                 </div>
-                <div class="tech-item">
-                    <a href="#" class="tech-btn">SQL</a>
+                
+                <div class="tech-item" data-tech="SQL">
+                    <a href="#" class="tech-btn">
+                        <i class="fas fa-database"></i> <span>SQL</span>
+                    </a>
                     <p class="tech-desc">Trabajo con bases de datos SQL para almacenamiento y manipulación de datos.</p>
                 </div>
-                <div class="tech-item">
-                    <a href="#" class="tech-btn">Java</a>
+                
+                <div class="tech-item" data-tech="Java">
+                    <a href="#" class="tech-btn">
+                        <i class="fab fa-java"></i> <span>Java</span>
+                    </a>
                     <p class="tech-desc">Uso Java para desarrollo backend y sistemas escalables.</p>
                 </div>
-                <div class="tech-item">
-                    <a href="#" class="tech-btn">PHP</a>
+                
+                <div class="tech-item" data-tech="PHP">
+                    <a href="#" class="tech-btn">
+                        <i class="fab fa-php"></i> <span>PHP</span>
+                    </a>
                     <p class="tech-desc">Desarrollo aplicaciones web con PHP y frameworks como Laravel.</p>
                 </div>
-            </div>
-        </div>
-
-        <!-- Panel Derecho (Perfil Profesional) -->
-        <div class="panel right-panel">
-            <h2>Perfil Profesional</h2>
-            <div class="perfil-container">
-                <p class="perfil-desc">
-                    Soy un desarrollador web con una mentalidad analítica y un enfoque práctico para resolver problemas. Me especializo en la creación de aplicaciones web dinámicas y eficientes, combinando lógica de programación con una interfaz intuitiva y atractiva.
-                </p>
-                <p class="perfil-desc">
-                    Trabajo con Spring Boot en el backend, manejando bases de datos MySQL y MS SQL Server. En el frontend, utilizo Angular, junto con HTML, CSS y TypeScript. También tengo experiencia con PHP y frameworks como Laravel.
-                </p>
-                <p class="perfil-desc">
-                    Me interesa la arquitectura de software y la forma en que los diferentes componentes de una aplicación interactúan entre sí. Siempre busco mejorar la eficiencia del código y asegurarme de que el sistema sea fácil de mantener.
-                </p>
-                <p class="perfil-desc">
-                    Además, tengo experiencia en integración de sistemas, consumo de APIs y desarrollo de carritos de compra. Disfruto automatizar tareas y encontrar soluciones eficientes.
-                </p>
-            </div>
+            </div>            
         </div>
     </div>
 </body>
